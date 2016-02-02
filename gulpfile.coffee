@@ -9,12 +9,16 @@ gulp.task "default", ["dev"]
 
 gulp.task "dev", ->
   runSequence "set-development", [
+    "copy-images"
     "bower"
+    "stylesheets"
     "webpack"
   ], "server", "watch"
 
 gulp.task "build", ->
   runSequence [
+    "copy-images"
     "bower"
+    "stylesheets"
     "webpack"
   ], "minify"

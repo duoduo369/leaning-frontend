@@ -1,2 +1,1 @@
-alter "It's worked"
-
+console.log "It's worked"
