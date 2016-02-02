@@ -15,5 +15,5 @@ config    = require "../config.coffee"
 gulp.task 'webpack', ->
   production = if config.production then '.production' else ''
   webpack require("../webpack.config#{production}"), (err, stats) ->
-    throw new gutil.PluginError 'webpack', err if err
+    throw new plugins.util.PluginError 'webpack', err if err
     plugins.util.log "[webpack]", stats.toString()

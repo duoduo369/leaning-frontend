@@ -1,7 +1,19 @@
 {
-  "name": "wintr-gulp-template",
-  "version": "1.0.0",
-  "dependencies": {
-    "backbone": "~1.1.2"
-  }
+  "name": "y",
+  "description": "coffee study",
+  "main": "index.js",
+  "authors": [
+    "duoduo369 <duoduo3369@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

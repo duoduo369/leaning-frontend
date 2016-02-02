@@ -33,43 +33,20 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 
+/******/ 	// on error function for async loading
+/******/ 	__webpack_require__.oe = function(err) { throw err; };
+
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Greetings;
-
-	Greetings = __webpack_require__(1);
-
-	$(function() {
-	  console.log(Greetings.sayHello());
-	  return console.log(Greetings.sayGoodbye());
-	});
-
-
-/***/ },
-/* 1 */
 /***/ function(module, exports) {
 
-	var Greetings;
-
-	Greetings = {
-	  sayHello: function() {
-	    return "Hello";
-	  },
-	  sayGoodbye: function() {
-	    return "Bye";
-	  }
-	};
-
-	module.exports = Greetings;
+	
 
 
 /***/ }
