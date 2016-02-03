@@ -14,4 +14,4 @@ gulp.task "server", ->
    gulp.src config.publicPath
     .pipe plugins.webserver
       port: 3000
-      livereload: true 
+      livereload: 22345
