@@ -17,7 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "react": "~0.14.7",
     "jquery": "~2.2.0"
+  },
+  "devDependencies": {
+    "spine": "~1.6.1"
   }
 }

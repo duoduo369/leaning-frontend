@@ -16,3 +16,6 @@ gulp.task "bower", ->
   gulp.src mainBowerFiles()
     .pipe plugins.concat("vendor.js")
     .pipe gulp.dest "#{config.outputPath}/#{config.jsDirectory}"
+
+  gulp.src "#{config.vendorPath}/**/*"
+    .pipe gulp.dest "#{config.outputPath}/#{config.jsDirectory}/vendor/"
