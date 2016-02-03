@@ -13,5 +13,6 @@ config  = require "../config.coffee"
 gulp.task "server", ->
    gulp.src config.publicPath
     .pipe plugins.webserver
+      host: '0.0.0.0'
       port: 3000
       livereload: 22345
