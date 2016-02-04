@@ -16,10 +16,14 @@ module.exports =
       "jquery": "jQuery"
       "$": "jQuery"
 
-  module: loaders: [ 
+  module: loaders: [
     {
       test: /\.coffee$/
       loader: 'coffee-loader'
+    }
+    {
+      test: /\.eco$/
+      loader: 'eco-loader'
     }
   ]
   resolve:
@@ -32,5 +36,6 @@ module.exports =
       '.js'
       '.coffee'
       '.html'
+      '.eco'
     ]
    

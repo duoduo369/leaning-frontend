@@ -1,0 +1,9 @@
+<header>
+  course list
+</header>
+
+<div class="course-list">
+  <% for course in @: %>
+    <p><%= course.name %> </p>
+  <% end %>
+</div>

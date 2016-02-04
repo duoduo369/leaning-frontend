@@ -1,5 +1,17 @@
-CourseListController = require('./controllers/courses')
-Course = require './models/courses'
+config = require "./config.coffee"
+Spine.Model.host = config.host
 
-controller = CourseListController()
-$('#div1').append(controller.data)
+#Courses = require './controllers/main'
+CourseListController = require './controllers/courses'
+
+class App extends Spine.Controller
+  el: 'body'
+  className: 'app'
+  constructor: ->
+    super
+    @courseListController = new CourseListController()
+    @append @courseListController.render()
+    Spine.Route.setup()
+
+$ ->
+  new App()
