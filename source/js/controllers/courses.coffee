@@ -3,6 +3,7 @@ Course = require '../models/courses'
 
 class CourseListController extends Spine.Controller
   url: "#{config.host}/api/v2/courses"
+  el: '#course-list'
   className: 'courses'
 
   constructor: ->

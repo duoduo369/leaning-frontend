@@ -10,7 +10,6 @@ class App extends Spine.Controller
   constructor: ->
     super
     @courseListController = new CourseListController()
-    @append @courseListController.render()
     Spine.Route.setup()
 
 $ ->
