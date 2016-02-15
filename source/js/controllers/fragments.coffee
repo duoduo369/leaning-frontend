@@ -19,7 +19,7 @@ class FragmentItem extends Spine.Controller
 
   render: (items) =>
     @item = items if items
-    @html(@template(@item)) if @item
+    @append(@template(@item)) if @item
     @
 
 class FragmentListController extends Spine.Controller
