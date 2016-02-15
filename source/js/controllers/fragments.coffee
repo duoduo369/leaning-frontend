@@ -47,7 +47,9 @@ class FragmentListController extends Spine.Controller
     wall = new freewall.Freewall("#fragment-items")
     wall.reset
       selector: '.fragment-box'
+      duration: 100
       animate: true
+      reverse: true
       cellW: 300
       cellH: 300
       onResize: ->

@@ -1,7 +1,6 @@
 config = require "./config.coffee"
 utils = require './utils.coffee'
 global.lazy = require('lazyloadjs')()
-console.log utils
 
 utils.set_model_host()
 

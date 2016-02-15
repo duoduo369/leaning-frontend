@@ -4,8 +4,6 @@ class FragmentTag extends Spine.Model
   @url: "/api/v2/fragment/tags"
 
   @beforeFromJSON: (data) ->
-    console.log 'FragmentTag beforeFromJSON'
-    console.log data['tags']
     data['tags']
 
 module.exports = FragmentTag
