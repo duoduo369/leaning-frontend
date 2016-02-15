@@ -1,8 +1,13 @@
 <% for fragment in @: %>
   <div class='fragment-box'>
     <a href="<%= fragment.web_address %>" target="_blank">
-      <img src="<%= fragment.cover_image %>" title="<%= fragment.title %>"
-        alt="<%= fragment.title %>" data-caption="<%= fragment.title %>" />
+      <img
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-src="<%= fragment.cover_image %>"
+        title="<%= fragment.title %>"
+        alt="<%= fragment.title %>"
+        data-caption="<%= fragment.title %>"
+        onload="lazy(this)" />
     </a>
   </div>
 <% end %>
