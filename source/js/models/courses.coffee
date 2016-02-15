@@ -4,8 +4,6 @@ class Course extends Spine.Model
   @url: "/api/v2/courses"
 
   @beforeFromJSON: (data) ->
-    console.log 'beforeFromJSON'
-    console.log data['courses']
     data['courses']
 
 module.exports = Course

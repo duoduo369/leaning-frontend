@@ -1,8 +1,12 @@
 config = require "./config.coffee"
-Spine.Model.host = config.host
+utils = require './utils.coffee'
+console.log utils
+
+utils.set_model_host()
 
 #Courses = require './controllers/main'
 CourseListController = require './controllers/courses'
+FragmentListController = require './controllers/fragments'
 
 class App extends Spine.Controller
   el: 'body'
@@ -10,6 +14,7 @@ class App extends Spine.Controller
   constructor: ->
     super
     @courseListController = new CourseListController()
+    @fragmentListController = new FragmentListController()
     Spine.Route.setup()
 
 $ ->

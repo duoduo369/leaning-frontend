@@ -1,0 +1,5 @@
+<div>
+  <% for fragment in @: %>
+    <p><%= fragment.title %> </p>
+  <% end %>
+</div>
