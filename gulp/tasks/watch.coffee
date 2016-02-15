@@ -14,7 +14,7 @@ config    = require "../config.coffee"
 gulp.task "watch", ->
   gulp.watch "#{config.sourcePath}/#{config.cssDirectory}/**/*.{styl,sass,scss,css}", ["stylesheets"]
   gulp.watch "#{config.sourcePath}/#{config.imagesDirectory}/**/*", ["copy-images"]
-  gulp.watch "#{config.sourcePath}/#{config.jsDirectory}/**/*.{coffee,js}", ["javascripts"]
+  gulp.watch "#{config.sourcePath}/#{config.jsDirectory}/**/*.{coffee,js,eco}", ["javascripts"]
   gulp.watch "bower.json", ["bower"]
 
   plugins.livereload.listen()
