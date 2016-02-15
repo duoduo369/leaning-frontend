@@ -18,4 +18,4 @@ gulp.task "bower", ->
     .pipe gulp.dest "#{config.outputPath}/#{config.jsDirectory}"
 
   gulp.src "#{config.vendorPath}/**/*"
-    .pipe gulp.dest "#{config.outputPath}/#{config.jsDirectory}/vendor/"
+    .pipe gulp.dest "#{config.outputPath}/vendor/"

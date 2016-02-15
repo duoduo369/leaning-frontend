@@ -1,5 +1,8 @@
-<div>
-  <% for fragment in @: %>
-    <p><%= fragment.title %> </p>
-  <% end %>
-</div>
+<% for fragment in @: %>
+  <div class='fragment-box'>
+    <a href="<%= fragment.web_address %>" target="_blank">
+      <img src="<%= fragment.cover_image %>" title="<%= fragment.title %>"
+        alt="<%= fragment.title %>" data-caption="<%= fragment.title %>" />
+    </a>
+  </div>
+<% end %>

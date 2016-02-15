@@ -20,6 +20,9 @@
     "jquery": "~2.2.0"
   },
   "devDependencies": {
-    "spine": "~1.6.1"
+    "spine": "~1.6.1",
+    "marx": "~1.3.0",
+    "freewall": "~1.0.5",
+    "sliphover": "~2.0.4"
   }
 }

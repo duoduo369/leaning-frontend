@@ -1,6 +1,8 @@
 config = require '../config'
 FragmentTag = require '../models/fragment_tags'
 Fragment = require '../models/fragment'
+freewall = require 'freewall'
+sliphover = require 'sliphover'
 
 class FragmentItem extends Spine.Controller
   el: '#fragment-items'
@@ -41,6 +43,22 @@ class FragmentListController extends Spine.Controller
   add_fragment: (item) =>
     @append(item.render())
 
+  init_freewall: =>
+    wall = new freewall.Freewall("#fragment-items")
+    wall.reset
+      selector: '.fragment-box'
+      animate: true
+      cellW: 300
+      cellH: 300
+      onResize: ->
+        wall.refresh()
+
+    wall.fitWidth()
+    $(window).trigger("resize")
+    @el.sliphover
+      caption: 'data-caption'
+      withLink: true
+
   template: (items) ->
     require('../views/fragments')(items)
 
@@ -48,6 +66,6 @@ class FragmentListController extends Spine.Controller
     items = FragmentTag.all()
     @html(@template(items))
     @add_fragments()
-
+    @init_freewall()
 
 module.exports = FragmentListController

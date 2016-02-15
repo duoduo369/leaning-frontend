@@ -13,7 +13,7 @@ class App extends Spine.Controller
   className: 'app'
   constructor: ->
     super
-    @courseListController = new CourseListController()
+    #@courseListController = new CourseListController()
     @fragmentListController = new FragmentListController()
     Spine.Route.setup()
 
