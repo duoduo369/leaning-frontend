@@ -18,7 +18,8 @@
   ],
   "dependencies": {
     "jquery": "~2.2.0",
-    "lazyload": "lazyloadjs#~3.2.2"
+    "lazyload": "lazyloadjs#~3.2.2",
+    "jquery-loading": "~1.2.0"
   },
   "devDependencies": {
     "spine": "~1.6.1",

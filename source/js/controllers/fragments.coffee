@@ -36,9 +36,11 @@ class FragmentListController extends Spine.Controller
     FragmentTag.fetch()
 
   add_fragments: =>
+    @el.loading()
     tags = FragmentTag.all()
     fragments = (new FragmentItem(item: new Fragment(tag_id: tag.id)) for tag in tags)
     @add_fragment fragment for fragment in fragments
+    @el.loading('stop')
 
   add_fragment: (item) =>
     @append(item.render())
