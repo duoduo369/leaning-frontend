@@ -20,7 +20,7 @@
 nbproject
 Thumbs.db
 
-public/assets/*
+public/assets/
 
 # NPM packages folder and bower.
 #node_modules/
