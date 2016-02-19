@@ -32,11 +32,11 @@ class FragmentListController extends Spine.Controller
     # 需要FragmentListController先render一次才行，因为item中的el
     # 是由ListControlller动态生成的
     #FragmentTag.bind("refresh", @add_fragments)
+    @el.loading()
     FragmentTag.bind("refresh", @render)
     FragmentTag.fetch()
 
   add_fragments: =>
-    @el.loading()
     tags = FragmentTag.all()
     fragments = (new FragmentItem(item: new Fragment(tag_id: tag.id)) for tag in tags)
     @add_fragment fragment for fragment in fragments
